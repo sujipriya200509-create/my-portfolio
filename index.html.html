@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Suji Priya D – Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf7f2;--card:#fff;--ink:#1b2a49;--mute:#5d6678;--acc:#e8745b;--acc2:#7c6cf0;--line:#e6e0d6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1730;--card:#18224a;--ink:#f1f3fa;--mute:#a9b3cf;--line:#2a3562;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1730;--card:#18224a;--ink:#f1f3fa;--mute:#a9b3cf;--line:#2a3562;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;margin:0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:6px;align-items:center;justify-content:center;flex-wrap:wrap;padding:10px;background:var(--bg);border-bottom:1px solid var(--line)}
+nav a{color:var(--ink);text-decoration:none;font-size:13px;font-weight:500;padding:6px 12px;border-radius:99px}
+nav a:hover{background:var(--acc);color:#fff}
+nav button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:5px 11px;cursor:pointer}
+.hero{position:relative;text-align:center;padding:90px 20px 80px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.45;animation:fl 9s ease-in-out infinite}
+.b1{width:280px;height:280px;background:var(--acc);top:-60px;left:-40px}
+.b2{width:300px;height:300px;background:var(--acc2);bottom:-100px;right:-60px;animation-delay:-4s}
+@keyframes fl{50%{transform:translate(30px,25px) scale(1.12)}}
+.hero>*{position:relative}
+.tag{display:inline-block;padding:5px 16px;border-radius:99px;background:var(--card);border:1px solid var(--line);font-size:13px;color:var(--acc);font-weight:600;letter-spacing:.06em}
+.hero h1{font-size:clamp(40px,9vw,84px);margin:16px 0 6px;line-height:1.05}
+.hero h1 span{color:var(--acc)}
+.hero p{max-width:620px;margin:0 auto 24px;color:var(--mute)}
+.btn{display:inline-block;margin:4px;padding:11px 24px;border-radius:99px;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;font-size:14px;transition:.2s}
+.btn.o{background:transparent;color:var(--ink);border:2px solid var(--ink)}.btn:hover{transform:translateY(-3px)}
+section{max-width:1040px;margin:0 auto;padding:56px 20px}
+h2{font-size:clamp(28px,5vw,40px);margin-bottom:6px}
+h2::after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--acc),var(--acc2));margin:8px 0 26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;transition:.25s}
+.card:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 14px 30px rgba(0,0,0,.12)}
+.card h3{font-size:19px;margin-bottom:4px}.sm{font-size:13px;color:var(--mute)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:6px 14px;border-radius:99px;background:var(--card);border:1px solid var(--line);font-size:13px;font-weight:500}
+.chip:hover{background:var(--acc);color:#fff;border-color:var(--acc)}
+.sk{margin-bottom:14px}.sk b{display:block;font-size:13px;color:var(--acc);margin-bottom:6px;letter-spacing:.05em}
+.tl{border-left:3px solid var(--acc);padding-left:20px;margin-left:6px}
+.tl .card{margin-bottom:14px;position:relative}
+.tl .card::before{content:"";position:absolute;left:-31px;top:24px;width:15px;height:15px;border-radius:50%;background:var(--acc);border:3px solid var(--bg)}
+.yr{color:var(--acc);font-weight:600;font-size:13px}
+.cert{cursor:pointer;text-align:center;position:relative;overflow:hidden}
+.cert .ic{font-size:40px;display:block;margin-bottom:8px}
+.cert .ver{position:absolute;top:12px;right:12px;font-size:11px;background:var(--acc2);color:#fff;padding:2px 9px;border-radius:99px}
+.cert .view{display:inline-block;margin-top:10px;font-size:13px;font-weight:600;color:var(--acc)}
+.modal{position:fixed;inset:0;background:rgba(10,15,35,.75);display:none;align-items:center;justify-content:center;padding:20px;z-index:20}
+.modal.on{display:flex}
+.box{background:var(--card);border-radius:20px;max-width:560px;width:100%;padding:22px;max-height:90vh;overflow:auto}
+.drop{border:2px dashed var(--acc);border-radius:14px;min-height:240px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:14px;margin:14px 0;color:var(--mute);cursor:pointer}
+.drop img{max-width:100%;border-radius:10px}
+.x{float:right;border:0;background:var(--acc);color:#fff;border-radius:50%;width:32px;height:32px;cursor:pointer;font-size:16px}
+.ct a{display:flex;gap:12px;align-items:center;color:var(--ink);text-decoration:none;font-weight:500;padding:10px 0;word-break:break-all}
+.ct span{width:38px;height:38px;flex:none;border-radius:50%;background:var(--acc);display:grid;place-items:center;font-size:17px}
+footer{text-align:center;padding:30px 20px calc(30px + env(safe-area-inset-bottom,0px));color:var(--mute);font-size:13px}
+</style>
+</head>
+<body>
+<nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#certs">Certificates</a><a href="#contact">Contact</a><button id="th" aria-label="Toggle theme">◐</button></nav>
+
+<header class="hero">
+<div class="blob b1"></div><div class="blob b2"></div>
+<span class="tag">MCA STUDENT · DESIGNER · DEVELOPER</span>
+<h1>Hi, I’m <span>Suji Priya D</span></h1>
+<p>I design clean, colourful web and graphic experiences, and bring them to life with Python and React.js. Open to entry-level roles and internships.</p>
+<a class="btn" href="#certs">See my certificates</a><a class="btn o" href="#contact">Let’s talk</a>
+</header>
+
+<section id="about"><h2>About me</h2>
+<p>I’m an MCA student at Ayya Nadar Janaki Ammal College, Sivakasi, with a B.Sc in Computer Science from The Standard Fireworks Rajaratnam College for Women, Sivakasi. I love web design, graphic design, video editing and animation, and I keep learning through practical work.</p></section>
+
+<section id="skills"><h2>Skills &amp; tools</h2><div class="grid">
+<div class="sk"><b>PROGRAMMING</b><div class="chips"><span class="chip">Python</span><span class="chip">C</span></div></div>
+<div class="sk"><b>WEB</b><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">PHP</span></div></div>
+<div class="sk"><b>DATABASES</b><div class="chips"><span class="chip">SQL</span><span class="chip">MySQL</span><span class="chip">SQL Server</span></div></div>
+<div class="sk"><b>DESIGN</b><div class="chips"><span class="chip">Graphic design</span><span class="chip">Video editing</span><span class="chip">Animation</span></div></div>
+<div class="sk"><b>TOOLS</b><div class="chips"><span class="chip">Canva</span><span class="chip">Adobe InDesign</span><span class="chip">Maya</span><span class="chip">Blender</span></div></div>
+<div class="sk"><b>SOFT SKILLS</b><div class="chips"><span class="chip">Quick learner</span><span class="chip">Creativity</span><span class="chip">Teamwork</span></div></div>
+</div></section>
+
+<section id="projects"><h2>Projects</h2><div class="grid">
+<div class="card"><h3>ResumeForge</h3><div class="yr">AI-powered resume builder</div><p class="sm">A web-based professional resume builder with ATS analysis and career assistance features.</p><div class="chips"><span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">SQL Server</span></div></div>
+<div class="card"><h3>Image Quilting</h3><div class="yr">Texture synthesis and transfer</div><p class="sm">A texture synthesis and transfer application using image processing, with a Tkinter interface.</p><div class="chips"><span class="chip">Python</span><span class="chip">NumPy</span><span class="chip">OpenCV</span><span class="chip">Tkinter</span></div></div>
+</div></section>
+
+<section id="journey"><h2>My journey</h2><div class="tl">
+<div class="card"><div class="yr">2025 – 2027</div><h3>MCA (pursuing)</h3><p class="sm">Ayya Nadar Janaki Ammal College, Sivakasi · 1st Sem 87.07% · 2nd Sem 89.07%</p></div>
+<div class="card"><div class="yr">2022 – 2025</div><h3>B.Sc Computer Science</h3><p class="sm">The Standard Fireworks Rajaratnam College for Women, Sivakasi · 77.09%</p></div>
+<div class="card"><div class="yr">30 days</div><h3>React.js Training</h3><p class="sm">Renga Technologies, Thayilpatti</p></div>
+<div class="card"><div class="yr">15 days</div><h3>Web Development Training</h3><p class="sm">Rovan Infotech, Sivakasi</p></div>
+</div></section>
+
+<section id="certs"><h2>Certificates &amp; proof</h2>
+<p class="sm" style="margin-top:-14px;margin-bottom:18px">Tap any card to view the certificate.</p>
+<div class="grid" id="cg"></div></section>
+
+<section id="contact"><h2>Let’s connect</h2><div class="ct">
+<a href="tel:+919944414816"><span>📞</span>+91 9944414816</a>
+<a href="mailto:sujipriya200509@gmail.com"><span>✉️</span>sujipriya200509@gmail.com</a>
+<a href="https://linkedin.com/in/suji-priya-5452583b7"><span>in</span>linkedin.com/in/suji-priya-5452583b7</a>
+<a href="https://github.com/sujipriya200509"><span>⌨️</span>github.com/sujipriya200509</a>
+<a><span>📍</span>Rajapalayam, Tamil Nadu – 626117</a></div></section>
+<footer>© 2026 Suji Priya D · Made with care in Tamil Nadu</footer>
+
+<div class="modal" id="m"><div class="box"><button class="x" id="cx" aria-label="Close">✕</button>
+<h3 id="mt"></h3><div class="sm" id="ms"></div>
+<label class="drop" id="dz"><span id="dv">🖼️ Click to add certificate image<br><small>(preview only on this device)</small></span><input type="file" accept="image/*" id="fi" hidden></label>
+<a class="btn" id="ml" href="#" target="_blank" rel="noopener" style="display:none">Verify online ↗</a></div></div>
+
+<script>
+// To make proof permanent: set img to a data: URI and link to your verification URL.
+var C=[
+{n:"Responsive Web Design",s:"freeCodeCamp",y:"[Year]",i:"🌐"},
+{n:"Python Programming",s:"NPTEL / Coursera",y:"[Year]",i:"🐍"},
+{n:"UI/UX Design",s:"Google (Coursera)",y:"[Year]",i:"🎨"},
+{n:"Canva Design Essentials",s:"Canva",y:"[Year]",i:"✨"},
+{n:"SQL Basics",s:"HackerRank",y:"[Year]",i:"🗄️"}];
+var g=document.getElementById("cg");
+C.forEach(function(c,k){var d=document.createElement("div");d.className="card cert";
+d.innerHTML='<span class="ver">✔ Certified</span><span class="ic">'+c.i+'</span><h3>'+c.n+'</h3><div class="sm">'+c.s+' · '+c.y+'</div><span class="view">View certificate →</span>';
+d.onclick=function(){op(k)};g.appendChild(d)});
+var dv=document.getElementById("dv"),m=document.getElementById("m"),fi=document.getElementById("fi"),dz=document.getElementById("dz");
+function op(k){var c=C[k];document.getElementById("mt").textContent=c.n;document.getElementById("ms").textContent=c.s+" · "+c.y;
+dv.innerHTML='🖼️ Click to add certificate image<br><small>(preview only on this device)</small>';
+if(c.img){dv.innerHTML='<img alt="'+c.n+' certificate" src="'+c.img+'">'}
+var l=document.getElementById("ml");if(c.url){l.href=c.url;l.style.display="inline-block"}else l.style.display="none";
+m.classList.add("on")}
+fi.onchange=function(){var f=fi.files[0];if(!f)return;var r=new FileReader();r.onload=function(){dv.innerHTML='<img alt="Certificate" src="'+r.result+'">'};r.readAsDataURL(f)};
+document.getElementById("cx").onclick=function(){m.classList.remove("on")};
+m.onclick=function(e){if(e.target===m)m.classList.remove("on")};
+document.getElementById("th").onclick=function(){var r=document.documentElement,d=r.getAttribute("data-theme");
+var dark=d?d==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.setAttribute("data-theme",dark?"light":"dark")};
+</script>
+</body>
+</html>
